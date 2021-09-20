@@ -1,0 +1,58 @@
+@import "varsAndMixins";
+*{
+  margin: 0;
+  padding: 0;
+}
+#app, html, body{
+  margin: 0;
+  padding: 0;
+}
+.main-wrapper{
+ @include flex-column;
+  padding: 20px 40px;
+}
+.main-container{
+  @include flex-column;
+}
+img{
+  width: 100%;
+}
+.root_folders{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 0 -10px;
+  & >.foldersAndFiles{
+    min-width: 200px;
+    max-width: 300px;
+    width: 100%;
+    padding: 15px;
+    background-color: $default-bg-color;
+    @include border;
+    margin: 0 10px 10px 10px;
+    & > .folders{
+      &>.folders-label{
+        @include flex-column;
+        align-items: center;
+        position: relative;
+        border-bottom: 1px solid $default-border-color;
+        padding-bottom: 10px;
+        margin-bottom: 5px;
+        img{
+          max-width: 50px;
+          margin-right: 0;
+          width: 100%;
+          margin-bottom: 2px;
+        }
+        span{
+          position: absolute;
+          right: 0;
+          top:0;
+          @include files-counter
+        }
+      }
+    }
+  }
+}
+@import "folderView";
+@import "filesView";

@@ -1,0 +1,38 @@
+$default-text-color: #212121;
+$default-bg-color: rgb(194, 194, 194);
+$default-border-color: grey;
+$count-files-colour: rgb(176, 176, 176);
+@mixin flex-column{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+}
+@mixin border{
+  border: 1px solid $default-border-color;
+  border-radius: 6px;
+}
+@mixin flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin files-counter{
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  width: 16px;
+  height: 16px;
+  @include flex-center;
+  background-color: $count-files-colour;
+}
+@mixin files-counter-small{
+  border-radius: 50%;
+  padding: 2px;
+  font-size: 8px;
+  font-weight: bold;
+  width: 12px;
+  height: 12px;
+  @include flex-center;
+  background-color: $count-files-colour;
+}
