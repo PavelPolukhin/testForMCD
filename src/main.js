@@ -9,7 +9,6 @@ const store = createStore({
         foldersAndFiles,
     },
 })
-
 const app = createApp(App)
 app.use(store);
 app.use({

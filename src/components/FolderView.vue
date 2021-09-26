@@ -14,7 +14,7 @@
           :folders="folder.folders ? folder.folders : ''"
           :label="folder.name ? folder.name : 'defaultName'"
           :depth="depth + 1"
-          :countFiles="this.$helpers.countsFiles(folder.files, folder.folders)"
+          :countFiles="this.$helpers.countsFiles(folder.files?.length, folder.folders?.length)"
           :files="folder.files ? folder.files : ''"
       >
       </folder-view>

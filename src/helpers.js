@@ -1,12 +1,4 @@
-const countsFiles = (files, folders) => {
-    if (files && folders) {
-        return files.length + folders.length
-    } else if (files) {
-        return files.length
-    } else if (folders) {
-        return folders.length
-    } else {
-        return ''
-    }
+const countsFiles = (files = 0, folders = 0) => {
+        return files + folders
 }
 export default { countsFiles };

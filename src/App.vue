@@ -8,7 +8,7 @@
             :folders="folder.folders"
             :depth="0"
             :label="folder.name"
-            :countFiles="this.$helpers.countsFiles(folder.files, folder.folders)"
+            :countFiles="this.$helpers.countsFiles(folder.files?.length, folder.folders?.length)"
             :files="folder.files ? folder.files : ''"
         ></folder-view>
       </div>
@@ -16,6 +16,7 @@
         <file-view v-for="(item, index) in files" :key="index" :file="item"/>
      </div>
     </div>
+
   </div>
 </template>
 
