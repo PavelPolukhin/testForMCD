@@ -71,7 +71,6 @@ const state = {
         folders: [
             {
                 name: "icons2",
-                folders:[{}],
             },
             {
                 name: "backgrounds2",

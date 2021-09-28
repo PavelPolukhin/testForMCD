@@ -5,11 +5,11 @@
         <folder-view
             v-for="(folder, index) in folders"
             :key="index"
-            :folders="folder.folders"
+            :folders="folder.folders || ''"
             :depth="0"
             :label="folder.name"
             :countFiles="this.$helpers.countsFiles(folder.files?.length, folder.folders?.length)"
-            :files="folder.files ? folder.files : ''"
+            :files="folder.files || ''"
         ></folder-view>
       </div>
      <div class="root_files">

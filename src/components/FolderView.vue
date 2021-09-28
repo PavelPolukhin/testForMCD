@@ -11,11 +11,11 @@
       <folder-view
           v-if="showChildren"
           v-for="folder in folders"
-          :folders="folder.folders ? folder.folders : ''"
-          :label="folder.name ? folder.name : 'defaultName'"
+          :folders="folder.folders || ''"
+          :label="folder.name || 'defaultName'"
           :depth="depth + 1"
           :countFiles="this.$helpers.countsFiles(folder.files?.length, folder.folders?.length)"
-          :files="folder.files ? folder.files : ''"
+          :files="folder.files || ''"
       >
       </folder-view>
       <div class="folder_files" v-if="showChildren && files.length">
